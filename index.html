@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <style>
         * {
             margin: 0;
@@ -27,7 +28,6 @@
         }
 
         header h1 {
-            margin: 0;
             font-size: 2.5em;
         }
 
@@ -57,18 +57,6 @@
             padding: 20px;
         }
 
-        .profile-img {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .profile-img img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #007bff;
-        }
-
         .section {
             margin-bottom: 50px;
         }
@@ -88,13 +76,25 @@
             line-height: 1.8;
         }
 
+        .profile-img {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+        }
+
+        /* Skills */
         .skills ul {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             list-style: none;
-            padding: 0;
-            margin: 20px 0;
+            margin-top: 20px;
         }
 
         .skills ul li {
@@ -104,13 +104,49 @@
             margin: 10px;
             border-radius: 30px;
             font-size: 1.1em;
-            transition: transform 0.3s;
         }
 
-        .skills ul li:hover {
-            transform: scale(1.1);
+        /* Experience */
+        .experience {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
+        .experience-card {
+            background: #fff;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-card h3 {
+            font-size: 1.4em;
+            color: #333;
+        }
+
+        .experience-card h4 {
+            font-size: 1.1em;
+            color: #007bff;
+            margin: 5px 0;
+        }
+
+        .experience-card span {
+            display: block;
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
+        }
+
+        .experience-card ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Projects */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,34 +158,21 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s, transform 0.3s;
+            transition: transform 0.3s;
         }
 
         .project-card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             transform: translateY(-10px);
         }
 
         .project-card img {
             width: 100%;
+            height: 250px;
             border-radius: 10px;
         }
 
         .project-card h3 {
             margin: 15px 0 10px;
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        .project-card p {
-            margin-bottom: 15px;
-        }
-
-        .project-card a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            font-size: 1.1em;
         }
 
         footer {
@@ -159,37 +182,38 @@
             padding: 20px;
             margin-top: 50px;
         }
-
-        footer p {
-            margin: 0;
-        }
-        .project-card img{
-            height: 250px;
-        }
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Siva Krishan R</h1>
+        <h1>Siva Krishna R</h1>
     </header>
 
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
+
+        <!-- About -->
         <section id="about" class="section">
             <div class="profile-img">
-                <img src="./profile_img (1).jpeg" alt="Profile Picture">
+                <img src="./profile_img (1).jpeg" alt="Profile">
             </div>
             <h2>About Me</h2>
-            <p>I'm a passionate developer specializing in Python, Django,Flask , ORM, REST APIs, and ReactJS. I build modern, responsive applications and enjoy exploring new technologies.</p>
+            <p>
+                I'm a passionate developer specializing in Python, Django, Flask, ORM, REST APIs, and ReactJS.
+                I build scalable backend systems and modern, responsive web applications.
+            </p>
         </section>
 
+        <!-- Skills -->
         <section id="skills" class="section">
             <h2>Skills</h2>
             <div class="skills">
@@ -199,60 +223,107 @@
                     <li>Flask</li>
                     <li>ORM</li>
                     <li>REST APIs</li>
-                    <li>MySql</li>
-                    <li>Mango DB</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
                     <li>ReactJS</li>
-                    <li>JAVA SCRIPT</li>
+                    <li>JavaScript</li>
                     <li>HTML5</li>
-                    
                 </ul>
             </div>
         </section>
 
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2>Professional Experience</h2>
+
+            <div class="experience">
+
+                <div class="experience-card">
+                    <h3>TECNICS</h3>
+                    <h4>Full Stack Developer</h4>
+                    <span>Jan 2025 – Jun 2025 | Hyderabad, India</span>
+                    <ul>
+                        <li>Worked on SAP Data Migration project with end-to-end validation workflows.</li>
+                        <li>Implemented Excel and post-load validation using Python and Pandas.</li>
+                        <li>Developed Django REST APIs and React dashboards.</li>
+                        <li>Improved data quality through transformation and validation logic.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Algonox</h3>
+                    <h4>Python Developer</h4>
+                    <span>Sep 2024 – Dec 2024 | Hyderabad, India</span>
+                    <ul>
+                        <li>Supported Capgemini AI/ML project through ticket resolution.</li>
+                        <li>Validated documents using predefined business rules.</li>
+                        <li>Worked with AWS, Docker, and MySQL for data processing pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>PIXL</h3>
+                    <h4>Python Developer</h4>
+                    <span>Jun 2024 – Aug 2024 | Hyderabad, India</span>
+                    <ul>
+                        <li>Developed REST APIs using Django and ORM.</li>
+                        <li>Worked on lending and medical web applications.</li>
+                        <li>Built admin panels, database models, and logging systems.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
         <section id="projects" class="section">
             <h2>Projects</h2>
+
             <div class="projects">
                 <div class="project-card">
-                    <img src="./gg.png" alt="Project Image">
+                    <img src="./gg.png">
                     <h3>Gully Grocery</h3>
-                    <p>A comprehensive online platform that empowers vendors with operational tools and analytics while offering users seamless shopping with features like product browsing, secure payments, location-based recommendations, and real-time order tracking.</p>
+                    <p>Online grocery platform with vendor dashboards, payments, and order tracking.</p>
                     <a href="https://gullygrocery.vercel.app/" target="_blank">View Project</a>
                 </div>
 
                 <div class="project-card">
-                    <img src="./travelguider.jpg" alt="Project Image">
+                    <img src="./travelguider.jpg">
                     <h3>Travel Guider</h3>
-                    <p>Designed a Tourist Website in which It allow the users to search Tourist places, Hotels and Restaurants. By using the location name view hotels, restaurants.</p>
+                    <p>Tourist platform to find places, hotels, and restaurants.</p>
                     <a href="https://travel-guider.vercel.app/" target="_blank">View Project</a>
                 </div>
+
                 <div class="project-card">
-                    <img src="./vot.png" alt="Project Image">
-                    <h3>OnlineVoteCasting</h3>
-                    <p>Build a Website naming Online Vote Casting where it has a registration page, a login page, a main page, and a list of• names that cast votes</p>
+                    <img src="./vot.png">
+                    <h3>Online Vote Casting</h3>
+                    <p>Secure online voting system with authentication.</p>
                     <a href="https://repani145.github.io/Cast_u_R_vote/" target="_blank">View Project</a>
                 </div>
+
                 <div class="project-card">
-                    <img src="./web.jpeg" alt="Project Image">
-                    <h3>ResponsiveWebsite</h3>
-                    <p>This is the web page which has animation , responsive and professional UI . To do this project I have used technologies HTML, CSS and Bootstrap .</p>
+                    <img src="./web.jpeg">
+                    <h3>Responsive Website</h3>
+                    <p>Animated and responsive UI using HTML, CSS, Bootstrap.</p>
                     <a href="https://repani145.github.io/mymind_project/" target="_blank">View Project</a>
                 </div>
-                
             </div>
         </section>
 
+        <!-- Contact -->
         <section id="contact" class="section">
             <h2>Contact</h2>
             <p>Email: sivakrishna.aar@gmail.com</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/siva-krishna-aar/" target="_blank">siva-krishna-aar</a></p>
-            <p><a href="./resume_qr_portfolio.pdf" target="_blank">see my resume</a></p>
+            <p><a href="./resume_qr_portfolio.pdf" target="_blank">See My Resume</a></p>
         </section>
+
     </div>
 
     <footer>
-        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+        <p>&copy; 2025 Siva Krishna R. All Rights Reserved.</p>
     </footer>
+
 </body>
 
 </html>
-
